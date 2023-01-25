@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 container.setAttribute(
   "style",
-  "display: flex; max-width:20em; max-height: 100em; flex-wrap: wrap;"
+  "display: flex; max-width:20em; max-height: 20em; flex-wrap: wrap;"
 );
 
 for (let i = 0; i <= 16 * 16 - 1; i++) {
