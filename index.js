@@ -2,16 +2,17 @@ const btn = document.querySelector("button");
 btn.addEventListener("click", getGrid);
 
 let grid;
+
 function getGrid() {
   grid = prompt("How many grid? Up to 100!");
-  for (let i = 0; i <= grid * grid - 1; i++) {
+  for (let i = 0; i < grid * grid; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");
-    div.setAttribute("style", "min-width: 60px");
+    div.setAttribute("style", `min-width:${960 / grid}px`); //is there a way to use 'grid' inside the strings?
   }
 
-  const divs = document.querySelectorAll(".square"); //divs is a Nodelist! not an array!
+  const divs = document.querySelectorAll(".square");
   const divsArr = Array.from(divs);
 
   for (i = 0; i < divsArr.length; i++) {
@@ -30,6 +31,3 @@ container.setAttribute(
   "style",
   "display: flex; width:960px; height: 960px; flex-wrap: wrap;"
 );
-// something here to determine grid size
-
-//how can i access 'grid'?
