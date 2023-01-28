@@ -1,8 +1,8 @@
 const btn = document.querySelector("button");
-btn.setAttribute("style", "width: 150px; height: 50px");
-const resetBtn = document.querySelector(".reset");
-resetBtn.setAttribute("style", "width: 100px; height: 50px");
-resetBtn.addEventListener("click", eraseAll);
+btn.style.cssText = "width: 150px; height: 50px";
+const clearBtn = document.querySelector(".clear");
+clearBtn.style.cssText = "width : 100px; height: 50px";
+clearBtn.addEventListener("click", eraseAll);
 btn.addEventListener("click", removeAll);
 btn.addEventListener("click", getGrid);
 
@@ -32,10 +32,8 @@ function removeAll() {
 function getGrid() {
   console.log("run getgrid");
   const container = document.querySelector(".container");
-  container.setAttribute(
-    "style",
-    "display: flex; width:960px; height: 960px; flex-wrap: wrap;"
-  );
+  container.style.cssText =
+    "display: flex; flex-wrap: wrap; width: 900px; height: 900px";
 
   grid = prompt("How many grid? Up to 100!");
 
@@ -43,7 +41,7 @@ function getGrid() {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");
-    div.setAttribute("style", `min-width:${960 / grid}px`);
+    div.setAttribute("style", `min-width:${900 / grid}px`);
   }
 
   const divs = document.querySelectorAll(".square");

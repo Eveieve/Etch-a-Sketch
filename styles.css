@@ -3,4 +3,27 @@
 }
 * {
   box-sizing: border-box;
+  border: 1px solid red;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container {
+  width: 900px;
+  height: 900px;
+  border: 2px grey solid;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
