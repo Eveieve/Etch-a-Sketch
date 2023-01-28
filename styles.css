@@ -3,6 +3,13 @@
 }
 * {
   box-sizing: border-box;
+  border: 1px solid red;
+}
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .container {
   width: 800px;
