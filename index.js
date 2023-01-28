@@ -33,7 +33,7 @@ function getGrid() {
   console.log("run getgrid");
   const container = document.querySelector(".container");
   container.style.cssText =
-    "display: flex; flex-wrap: wrap; width: 900px; height: 900px";
+    "display: flex; flex-wrap: wrap; width: 800px; height: 800px";
 
   grid = prompt("How many grid? Up to 100!");
 
@@ -41,7 +41,7 @@ function getGrid() {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");
-    div.setAttribute("style", `min-width:${900 / grid}px`);
+    div.style.cssText = `min-width:${800 / grid}px`;
   }
 
   const divs = document.querySelectorAll(".square");
