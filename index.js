@@ -33,7 +33,7 @@ const container = document.querySelector(".container");
 container.style.cssText =
   "display: flex; flex-wrap: wrap; width: 800px; height: 800px";
 
-for (let i = 0; i < 20 * 20 - 1; i++) {
+for (let i = 0; i < 20 * 20; i++) {
   const div = document.createElement("div");
   container.appendChild(div);
   div.classList.add("square");
@@ -60,7 +60,7 @@ function getGrid() {
 
   grid = prompt("How many grid? Up to 100!");
 
-  for (let i = 0; i < grid * grid - 1; i++) {
+  for (let i = 0; i < grid * grid; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");

@@ -1,9 +1,9 @@
-.square {
+/* .square {
   border: 1px solid lightgrey;
-}
+} */
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 html {
   display: flex;
@@ -12,8 +12,7 @@ html {
   min-height: 100vh;
 }
 .container {
-  width: 800px;
-  height: 800px;
+  border: 2px solid black;
 }
 .title {
   display: flex;
