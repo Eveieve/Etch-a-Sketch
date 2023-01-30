@@ -6,8 +6,6 @@ clearBtn.addEventListener("click", eraseAll);
 btn.addEventListener("click", removeAll);
 btn.addEventListener("click", getGrid);
 
-let grid;
-
 function eraseAll() {
   console.log("eraseAll");
   const divs = document.querySelectorAll(".square");
@@ -29,6 +27,31 @@ function removeAll() {
   }
 }
 
+//create the initial grid so the page is not blank.
+
+const container = document.querySelector(".container");
+container.style.cssText =
+  "display: flex; flex-wrap: wrap; width: 800px; height: 800px";
+
+for (let i = 0; i < 20 * 20 - 1; i++) {
+  const div = document.createElement("div");
+  container.appendChild(div);
+  div.classList.add("square");
+  div.style.cssText = `min-width:${800 / 20}px`;
+}
+
+const divs = document.querySelectorAll(".square");
+const divsArr = Array.from(divs);
+
+for (i = 0; i < divsArr.length; i++) {
+  divsArr[i].addEventListener(
+    "mouseover",
+    (e) => (e.target.style.background = "blue")
+  );
+}
+
+let grid;
+
 function getGrid() {
   console.log("run getgrid");
   const container = document.querySelector(".container");
@@ -37,7 +60,7 @@ function getGrid() {
 
   grid = prompt("How many grid? Up to 100!");
 
-  for (let i = 0; i < grid * grid; i++) {
+  for (let i = 0; i < grid * grid - 1; i++) {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");
@@ -54,3 +77,5 @@ function getGrid() {
     );
   }
 }
+// when rgb button is clicked, make the squares in rbg color when hovered.
+//
