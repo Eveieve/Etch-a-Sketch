@@ -1,7 +1,7 @@
 const btn = document.querySelector("button");
-btn.style.cssText = "width: 150px; height: 50px";
+
 const clearBtn = document.querySelector(".clear");
-clearBtn.style.cssText = "width : 100px; height: 50px";
+
 clearBtn.addEventListener("click", eraseAll);
 btn.addEventListener("click", removeAll);
 btn.addEventListener("click", getGrid);
@@ -79,3 +79,28 @@ function getGrid() {
 }
 // when rgb button is clicked, make the squares in rbg color when hovered.
 //
+
+//why the red underline?
+// can't divs be initialized again if it's out of the function?
+
+const rgbButton = document.querySelector(".rgb");
+rgbButton.addEventListener("click", getRgb);
+
+function getRandomRgb() {
+  console.log("getRandomRgb");
+  return Math.floor(Math.random() * 256);
+} //this function can be outside of getRbg or inside.. which is better?
+
+function getRgb() {
+  console.log("getRgb");
+  const divs = document.querySelectorAll(".square");
+  const divsArr = Array.from(divs);
+
+  for (i = 0; i < divsArr.length; i++) {
+    divsArr[i].addEventListener(
+      "mouseover",
+      (e) =>
+        (e.target.style.backgroundColor = `rgb(${getRandomRgb()},${getRandomRgb()} ,${getRandomRgb()}`)
+    );
+  }
+}
