@@ -25,6 +25,12 @@ h1 {
 }
 
 button {
-  width: 150px;
-  height: 50px;
+  width: 9rem;
+  height: 3rem;
+}
+
+select {
+  text-align: center;
+  width: 9rem;
+  height: 3rem;
 }
