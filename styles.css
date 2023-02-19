@@ -15,9 +15,7 @@ html {
   border: 2px solid black;
 }
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
 }
 .body-container {
   display: flex;
