@@ -46,7 +46,7 @@ const divsArr = Array.from(divs);
 for (i = 0; i < divsArr.length; i++) {
   divsArr[i].addEventListener(
     "mouseover",
-    (e) => (e.target.style.background = "blue")
+    (e) => (e.target.style.background = "black")
   );
 }
 
@@ -56,7 +56,7 @@ function getGrid() {
   console.log("run getgrid");
   const container = document.querySelector(".container");
   container.style.cssText =
-    "display: flex; flex-wrap: wrap; width: 800px; height: 800px";
+    "display: flex; flex-wrap: wrap; width: 40rem; height: 40rem";
 
   grid = prompt("How many grid? Up to 100!");
 
