@@ -31,7 +31,7 @@ function removeAll() {
 
 const container = document.querySelector(".container");
 container.style.cssText =
-  "display: flex; flex-wrap: wrap; width: 800px; height: 800px";
+  "display: flex; flex-wrap: wrap; width: 40rem; height: 40rem";
 
 for (let i = 0; i < 20 * 20; i++) {
   const div = document.createElement("div");
