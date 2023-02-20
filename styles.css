@@ -2,13 +2,19 @@ html {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: rgb(255, 244, 230);
 }
 .container {
-  border: 2px solid black;
+  border: 1rem solid plum;
+  border-radius: 1rem;
+  outline: 0.2rem solid rgb(226, 167, 226);
 }
 
 h1 {
   text-align: left;
+  color: indianred;
+  font-size: 2.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .body-container {
   display: flex;
@@ -27,10 +33,27 @@ h1 {
 button {
   width: 9rem;
   height: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: indianred;
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  border: 0.3rem solid plum;
 }
 
 select {
   text-align: center;
   width: 9rem;
   height: 3rem;
+  color: indianred;
+  background-color: antiquewhite;
+  border: 0.3rem solid plum;
+  border-radius: 1rem;
+}
+
+select:hover {
+  background-color: rgb(226, 211, 191);
+}
+
+button:hover {
+  background-color: rgb(226, 211, 191);
 }
