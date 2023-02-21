@@ -31,13 +31,13 @@ function removeAll() {
 
 const container = document.querySelector(".container");
 container.style.cssText =
-  "display: flex; flex-wrap: wrap; width: 40rem; height: 40rem";
+  "display: flex; flex-wrap: wrap; width: 600px; height: 600px";
 
 for (let i = 0; i < 20 * 20; i++) {
   const div = document.createElement("div");
   container.appendChild(div);
   div.classList.add("square");
-  div.style.cssText = `min-width:${800 / 20}px`;
+  div.style.cssText = `min-width:${600 / 20}px`;
 }
 
 const divs = document.querySelectorAll(".square");
@@ -56,7 +56,7 @@ function getGrid() {
   console.log("run getgrid");
   const container = document.querySelector(".container");
   container.style.cssText =
-    "display: flex; flex-wrap: wrap; width: 40rem; height: 40rem";
+    "display: flex; flex-wrap: wrap; width: 600px; height: 600px;";
 
   grid = prompt("How many grid? Up to 100!");
 
@@ -64,7 +64,7 @@ function getGrid() {
     const div = document.createElement("div");
     container.appendChild(div);
     div.classList.add("square");
-    div.style.cssText = `min-width:${800 / grid}px`;
+    div.style.cssText = `min-width: ${600 / grid}px`;
   }
 
   const divs = document.querySelectorAll(".square");
