@@ -4,17 +4,15 @@ html {
   justify-content: center;
   background-color: rgb(255, 244, 230);
 }
-/* * {
-  border: 2px solid red;
-} */
+
 .container {
   border: 1rem solid plum;
   border-radius: 1rem;
   outline: 0.2rem solid rgb(226, 167, 226);
 }
 footer {
-  text-align: end;
-  padding-top: 1rem;
+  text-align: left;
+  padding-top: 3rem;
 }
 h1 {
   text-align: left;
